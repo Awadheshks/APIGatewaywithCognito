@@ -91,14 +91,14 @@ And Click “Create user pool”
 ### Step10:
 Now Go to AppClient and scroll down to app client name
 
-![image](https://github.com/Awadheshks/APIGatewaywithCognito/blob/c7765e56bfe7848f3c9a12d2b2e04e06cddc3b85/asset/AppClient1.png)
+![image](https://github.com/Awadheshks/APIGatewaywithCognito/blob/bd8b71ac4d5e87e64bcd217dad3e66922d7501b7/asset/AppClient1.png)
 
-![image](https://github.com/Awadheshks/APIGatewaywithCognito/blob/c7765e56bfe7848f3c9a12d2b2e04e06cddc3b85/asset/AppClient2.png)
+![image](https://github.com/Awadheshks/APIGatewaywithCognito/blob/bd8b71ac4d5e87e64bcd217dad3e66922d7501b7/asset/AppClient2.png)
 
 
 App client details:
 
-![image](https://github.com/Awadheshks/APIGatewaywithCognito/blob/c7765e56bfe7848f3c9a12d2b2e04e06cddc3b85/asset/AppClient3.png)
+![image](https://github.com/Awadheshks/APIGatewaywithCognito/blob/bd8b71ac4d5e87e64bcd217dad3e66922d7501b7/asset/AppClient3.png)
 
 ### Step11:
 Scroll down to Hosted UI tab window and click “View Hosted UI” top open it in browser
@@ -150,12 +150,12 @@ Deploy API to be visible for public by creating new stage
 
 
 ### Step18:
-Copy 'Invoke URL' and execute in browser https://syhxhdufb5.execute-api.us-east-1.amazonaws.com/Test 
+Copy 'Invoke URL' and execute in browser 'https://<...>.amazonaws.com/Test' 
 
  ![image](https://github.com/Awadheshks/APIGatewaywithCognito/blob/c7765e56bfe7848f3c9a12d2b2e04e06cddc3b85/asset/API-Response1.png)
  
  
-Add method name like https://syhxhdufb5.execute-api.us-east-1.amazonaws.com/Test/Transactions, you will get successful response
+Add method name like 'https://<...>.amazonaws.com/Test/Transactions', you will get successful response
 
  ![image](https://github.com/Awadheshks/APIGatewaywithCognito/blob/c7765e56bfe7848f3c9a12d2b2e04e06cddc3b85/asset/API-Response2.png)
  
@@ -178,11 +178,11 @@ Now lets click 'view Hosted UI' and open it in any browser.Before filling the cr
 id_token=<xxxxxxxxxxxxxxxxxxxxxxxxxx…..>
 access_token=<xxxxxxxxxxxxxxxxxxxxxxxxxx…..>
 
-![image](https://github.com/Awadheshks/APIGatewaywithCognito/blob/c7765e56bfe7848f3c9a12d2b2e04e06cddc3b85/asset/LoginPageURL-Token.png)
+![image](https://github.com/Awadheshks/APIGatewaywithCognito/blob/bd8b71ac4d5e87e64bcd217dad3e66922d7501b7/asset/LoginPageURL-Token.png)
 
 Once we have id_token ,lets test Authorizer by entering this value
 
-![image](https://github.com/Awadheshks/APIGatewaywithCognito/blob/c7765e56bfe7848f3c9a12d2b2e04e06cddc3b85/asset/Test-Authorizer.png)
+![image](https://github.com/Awadheshks/APIGatewaywithCognito/blob/bd8b71ac4d5e87e64bcd217dad3e66922d7501b7/asset/Test-Authorizer.png)
 
 
 ### Step22:
@@ -192,7 +192,7 @@ Its time to restrict API to use the user pool yet,go to API Gateway->resources a
 
 
 ### Step23:
-Now deploy API for new authorizer version.Now if you hit this URL https://syhxhdufb5.execute-api.us-east-1.amazonaws.com/Test/Transactions you can see message as “Unauthorized”
+Now deploy API for new authorizer version.Now if you hit this URL 'https://<...>.amazonaws.com/Test/Transactions', you can see message as “Unauthorized”
 
  ![image](https://github.com/Awadheshks/APIGatewaywithCognito/blob/c7765e56bfe7848f3c9a12d2b2e04e06cddc3b85/asset/Postman-ErrorMessage.png)
 
@@ -200,7 +200,7 @@ Now deploy API for new authorizer version.Now if you hit this URL https://syhxhd
 ### Step24:
 We can test API through Postman by using token as 'id_token' and receive successful response.
 
-![image](https://github.com/Awadheshks/APIGatewaywithCognito/blob/c7765e56bfe7848f3c9a12d2b2e04e06cddc3b85/asset/Postman.png)
+![image](https://github.com/Awadheshks/APIGatewaywithCognito/blob/bd8b71ac4d5e87e64bcd217dad3e66922d7501b7/asset/Postman.png)
 
 
 
