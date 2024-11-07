@@ -17,12 +17,12 @@ An Amazon Cognito user pool can be a standalone IdP. Amazon Cognito draws from t
   4. Create your own custom multi-step authentication flows.
   5. Look up users in another directory and migrate them to Amazon Cognito.
 
-![image](https://github.com/Awadheshks/APIGatewaywithCognito/blob/c7765e56bfe7848f3c9a12d2b2e04e06cddc3b85/asset/CogUserPool1.png)
+![image](https://github.com/Awadheshks/APIGatewaywithCognito/blob/fc3e58ae650551edcd85b559fbacb02ebf5bd5e0/asset/CogUserPool1.png)
 
 With Cognito User Pools, you can provide sign-up and sign-in functionality for your mobile or web app users. You don’t have to build or maintain any server infrastructure on which users will authenticate. 
 This diagram shows how authentication is handled with Cognito User Pools:
 
-![image](https://github.com/Awadheshks/APIGatewaywithCognito/blob/c7765e56bfe7848f3c9a12d2b2e04e06cddc3b85/asset/CogUserPool2.png)
+![image](https://github.com/Awadheshks/APIGatewaywithCognito/blob/fc3e58ae650551edcd85b559fbacb02ebf5bd5e0/asset/CogUserPool2.png)
 
 1.	Users send authentication requests to Cognito User Pools. 
 2.	The Cognito user pool verifies the identity of the user.
@@ -174,7 +174,7 @@ Lets go back to app client and update few details of Hosted UI
 
 
 ### Step21:
-Now lets view Hosted UI,change response_type=’code’ to ‘token’ in URL and extract id_token and access_token from URL
+Now lets click 'view Hosted UI' and open it in any browser.Before filling the credentials,change response_type=’code’ to ‘token’ in URL and extract id_token and access_token from URL
 id_token=<xxxxxxxxxxxxxxxxxxxxxxxxxx…..>
 access_token=<xxxxxxxxxxxxxxxxxxxxxxxxxx…..>
 
@@ -198,7 +198,7 @@ Now deploy API for new authorizer version.Now if you hit this URL https://syhxhd
 
 
 ### Step24:
-We can test API through Postman by using id_taken:
+We can test API through Postman by using token as 'id_token' and receive successful response.
 
 ![image](https://github.com/Awadheshks/APIGatewaywithCognito/blob/c7765e56bfe7848f3c9a12d2b2e04e06cddc3b85/asset/Postman.png)
 
