@@ -192,13 +192,13 @@ Its time to restrict API to use the user pool yet,go to API Gateway->resources a
 
 
 ### Step23:
-Now deploy API for new authorizer version.Now if you hit this URL 'https://<...>.amazonaws.com/Test/Transactions', you can see message as “Unauthorized”
+Now deploy API for new Authorizer Version and if you hit this URL 'https://<...>.amazonaws.com/Test/Transactions', you can see message as “Unauthorized”
 
  ![image](https://github.com/Awadheshks/APIGatewaywithCognito/blob/c7765e56bfe7848f3c9a12d2b2e04e06cddc3b85/asset/Postman-ErrorMessage.png)
 
 
 ### Step24:
-We can test API through Postman by using token as 'id_token' and receive successful response.
+We can test API through Postman by using token as 'id_token' in Headers and receive successful response.
 
 ![image](https://github.com/Awadheshks/APIGatewaywithCognito/blob/bd8b71ac4d5e87e64bcd217dad3e66922d7501b7/asset/Postman.png)
 
