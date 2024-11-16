@@ -7,23 +7,13 @@ An Amazon Cognito user pool is a user directory. With a user pool, your users ca
 Federated and local users have a user profile in your user pool.Local users are those who signed up or you created directly in your user pool. You can manage and customize these 
 user profiles in the AWS Management Console, an AWS SDK, or the AWS Command Line Interface (AWS CLI).
 
-Amazon Cognito user pools accept tokens and assertions from third-party IdPs, and collect the user attributes into a JWT that it issues to your app. You can standardize your app
-on one set of JWTs while Amazon Cognito handles the interactions with IdPs, mapping their claims to a central token format.
+### Configuration Details:
+First create an authorizer of the COGNITO_USER_POOLS type and then configure an API method to use that authorizer to use an Amazon Cognito user pool with your API. 
+After the API is deployed, the client must first sign the user into the user pool, obtain an identity or access token for the user, and then call the API method with 
+one of the tokens, which are typically set to the request's Authorization header.The API call succeeds only if the required token is supplied and it is valid, otherwise,
+the client isn't authorized to make the call because the client did not have credentials that could be authorized.
 
-An Amazon Cognito user pool can be a standalone IdP. Amazon Cognito draws from the OpenID Connect (OIDC) standard to generate JWTs for authentication and authorization. When you sign in local users, your user pool is authoritative for those users. You have access to the following features when you authenticate local users.
-  1. Implement your own web front-end that calls the Amazon Cognito user pools API to authenticate, authorize, and manage your users.
-  2. Set up multi-factor authentication (MFA) for your users. Amazon Cognito supports time-based one-time password (TOTP) and SMS message MFA.
-  3. Secure against access from user accounts that are under malicious control.
-  4. Create your own custom multi-step authentication flows.
-  5. Look up users in another directory and migrate them to Amazon Cognito.
-
-![image](https://github.com/Awadheshks/APIGatewaywithCognito/blob/fc3e58ae650551edcd85b559fbacb02ebf5bd5e0/asset/CogUserPool1.png)
-
-With Cognito User Pools, you can provide sign-up and sign-in functionality for your mobile or web app users. You don’t have to build or maintain any server infrastructure on which users will authenticate. 
-This diagram shows how authentication is handled with Cognito User Pools:
-
-![image](https://github.com/Awadheshks/APIGatewaywithCognito/blob/fc3e58ae650551edcd85b559fbacb02ebf5bd5e0/asset/CogUserPool2.png)
-
+** With Cognito User Pools, you can provide sign-up and sign-in functionality for your mobile or web app users. You don’t have to build or maintain any server infrastructure on which users will authenticate. 
 1.	Users send authentication requests to Cognito User Pools. 
 2.	The Cognito user pool verifies the identity of the user.
 3.	The Cognito User Pool Token is sent back to the user. 
