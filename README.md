@@ -1,5 +1,5 @@
 # Secure your API Gateway with Amazon Cognito User Pools
-![image](https://github.com/Awadheshks/APIGatewaywithCognito/blob/39e52b4ffb4a12415351e24e45d4955d0f0b0289/asset/Cognito%20Authorizer-Display%20Screen.png)
+![image](https://github.com/Awadheshks/APIGatewaywithCognito/blob/069b01bf7857a82e27d1a472b84a991097f0bf75/asset/Cognito%20Authorizer-Display%20Screen.png)
 
 ## AWS Cognito User pools
 
